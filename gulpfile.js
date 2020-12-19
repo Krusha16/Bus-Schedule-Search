@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const csso = require('gulp-csso');
 const del = require('del');
+const ghpages = require('gh-pages');
 
 function cleanTask() {
   return del('dist');
@@ -33,7 +34,12 @@ function stylesTask(){
   .pipe(dest('dist/css'))
 }
 
+function deployTask(){
+  return ghpages.publish('dist', function(err) {});
+}
+
 exports.html = htmlTask;
 exports.scripts = scriptsTask;
 exports.styles = stylesTask;
 exports.default = series(cleanTask, htmlTask, scriptsTask, stylesTask);
+exports.deploy = series(htmlTask, scriptsTask, stylesTask, deployTask);
