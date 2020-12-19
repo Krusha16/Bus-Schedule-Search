@@ -1,0 +1,22 @@
+{
+  "name": "sd105-assignment-1",
+  "version": "1.0.0",
+  "description": "apiAssignment1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krusha16/ApiAssignment1.git"
+  },
+  "author": "Krusha Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krusha16/ApiAssignment1/issues"
+  },
+  "homepage": "https://github.com/Krusha16/ApiAssignment1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
